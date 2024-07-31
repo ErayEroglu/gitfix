@@ -18,8 +18,8 @@ For python implementation, check out gitfix-python folder under this repository.
 
 ## How to Use
 To use GitFix, simply run `npm i` and create a config.json file in the root folder.
-Afterwards, you can start your own GitFix server via `npm run dev`.
-Then, using `node gitfix_client.js` will fix the grammar errors in the target repository given in the config.json.
+ Afterwards, you can start your own gitfix server via `npm run dev`.
+ Then using `node gitfix_client.js` will fix the grammar errors in the target repository given in the config.json.
 
 ### Requirements:
 
@@ -45,7 +45,7 @@ Then, using `node gitfix_client.js` will fix the grammar errors in the target re
 
 - openai-key: OpenAI API key
 
-You can see an example config file in the config.json in this repository.
+ You can see an example config file in the config.json in this repository.
 
 ### Indexing Your Repository
 
@@ -57,13 +57,13 @@ You can check if it is indexed by performing a search in your github homepage in
 repo:[your repo name]  path:*.md
 ```
 
-If the search results in your .md files, your repo is ready to go. Otherwise, you should wait until your repo is indexed. This process should take 2-3 minutes.
+If search results in your .md files, your repo is ready to go. Otherwise, you should wait until your repo is indexed. This process should take 2-3 minutes
 
 ### Ready to go
 
-After those steps, you can run GitFix.py, and GitFix will look for grammar errors and correct them automatically.
+ After those steps you can run GitFix.py and gitfix will look for grammar errors and will correct them automatically. 
 
- Afterwards you will receive the corrected content in a PR request to your repository.
+Afterwards, you will receive the corrected content in a PR request to your repository.
 
 ### How It Works
 
@@ -100,7 +100,7 @@ GitFix is a work in progress, so we'll add more features and improve the current
 
 ###### Optimize GPT4 Interaction:
 
-Currently, all of the file context is consumed in one message. We would like GPT to consume file content in multiple prompts as the time complexity of transformers scales with O(n^3).
+Currently, all of the file context is consumed in one message. We would like to have GPT to consume file content in multiple prompts as time complexity of transformers scale with O(n3). 
 
 In the future, we would like to partition the file content to contextually coherent sections and have gpt perform corrections on one section at a time.
 
@@ -118,5 +118,4 @@ If possible, we would like to remove the GitHub search API from our pipeline.
 ---
 
 If one of these ideas sounds like something you'd like to work on, contributions are very welcome! You can contribute by adding new features, fixing bugs, improving the documentation, writing blog posts, or by sharing GitFix on social media.
-
 
