@@ -15,7 +15,7 @@ GitFix is a grammar correction application that uses GPT4 to correct grammar err
 - Deployment Option: **[Fly.io](https://fly.io)**
 
 ## How to Use
- To use GitFix, you can simply run `pip install -r requirements.txt` and create a config.yaml file in the same folder as GitFix.py. Then, you are ready to go!
+To use GitFix, simply run `pip install -r requirements.txt` and create a config.yaml file in the same folder as GitFix.py. Then, you are ready to go!
 
 ### Requirements:
 
@@ -56,7 +56,7 @@ If search results in your .md files, your repo is ready to go. Otherwise, you sh
 
 ### Ready to go
 
- After those steps, you can run GitFix.py and GitFix will look for grammar errors and will correct them automatically.
+ After those steps you can run GitFix.py and gitfix will look for grammar errors and will correct them automatically. 
 
  Afterwards you will receive the corrected content in a PR request to your repository.
 
@@ -74,9 +74,9 @@ If search results in your .md files, your repo is ready to go. Otherwise, you sh
 
 ### Deploy It Yourself
 
-To run the GitFix server, you can simply create a Docker image using our Dockerfile. During this process, Docker copies the currently existing config file.
+To run the gitfix server, you can simply create a docker image using our Dockerfile. During this process, docker copies the currently existing config file.
 
-Afterwards, you can use that image to deploy to any serverless providers which support streaming with Python applications.
+Afterwards, you can use that image to deploy to any serverless providers that support streaming with Python applications.
 
 This part is tricky, as there are not many hosting platforms that support streaming with Python, including Lambda (due to bugs in the Lambda adapter) and Vercel. To host our app, we preferred **[Fly.io](https://fly.io)** as it provides this rare feature.
 
@@ -105,11 +105,11 @@ In the future, we would like to partition the file content to contextually coher
 
 ###### Enable Unindexed Repositories:
 
-Our current interaction scheme with GitHub API requires the target repo to be indexed in the GitHub Search Engine.
+Our current interaction scheme with GitHub API requires the target repo to be indexed in the Github Search Engine. 
 
 This may cause problems for small repos as the search engine sometimes fails to index them.
 
-If possible, we would like to remove github search api from our pipeline.
+If possible, we would like to remove the GitHub search API from our pipeline.
 
 
 ---
