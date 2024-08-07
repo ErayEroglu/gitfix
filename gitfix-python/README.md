@@ -19,7 +19,7 @@ GitFix is a grammar correction application that uses GPT4 to correct grammar err
 
 ### Requirements:
 
- - Python > 3.10
+ - Python>3.10
  - Having a public repository
  - An Upstash Redis database
  - OpenAI API key
@@ -28,7 +28,7 @@ GitFix is a grammar correction application that uses GPT4 to correct grammar err
 
 - github-repo: Target repository which GitFix will search for grammar errors.
 
-- files-per-run: Number of files Gitfix will change at each run 
+- files-per-run: Number of files GitFix will change at each run
 
 - github-token: A classical github token with repo:status, public_repo, and write:packages rights.
 
@@ -64,19 +64,19 @@ If search results in your .md files, your repo is ready to go. Otherwise, you sh
 
 <img src="./static/interaction_diagram.png" width="700">
 
-- Gitfix uses Github API to fetch md and mdx files and passes these files to GPT4.
+- GitFix uses GitHub API to fetch md and mdx files and passes these files to GPT4.
 
 - GPT4 indicates the grammar errors and suggests corrections.
 
 - GitFix forks the repository and pushes the corrections. If the target repository is owned by the github key owner, changes are pushed to a seperate branch.
 
-- Finally, a PR request is sent to the target repository.
+- Finally, a PR is sent to the target repository.
 
 ### Deploy It Yourself
 
-To run the GitFix server, you can simply create a Docker image using our Dockerfile. During this process, Docker copies the currently existing config file.
+To run the gitfix server, you can simply create a docker image using our Dockerfile. During this process, docker copies the currently existing config file.
 
-Afterwards, you can use that image to deploy to any serverless providers which support streaming with Python applications.
+Afterwards, you can use that image to deploy to any serverless providers that support streaming with Python applications.
 
 This part is tricky, as there are not many hosting platforms that support streaming with Python, including Lambda (due to bugs in the Lambda adapter) and Vercel. To host our app, we preferred **[Fly.io](https://fly.io)** as it provides this rare feature.
 
