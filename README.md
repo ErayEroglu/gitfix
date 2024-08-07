@@ -17,9 +17,9 @@ GitFix is a grammar correction application that uses GPT4 to correct grammar err
 For python implementation, check out gitfix-python folder under this repository.
 
 ## How to Use
-To use GitFix, simply run `npm i` and create a config.json file in the root folder.
- Afterwards, you can start your own gitfix server via `npm run dev`.
- Then using `node gitfix_client.js` will fix the grammar errors in the target repository given in the config.json.
+To use GitFix, you can simply run `npm i` and create a config.json file in the root folder.
+Afterwards, you can start your own GitFix server via `npm run dev`.
+Then, using `node gitfix_client.js` will fix the grammar errors in the target repository given in the config.json.
 
 ### Requirements:
 
@@ -45,7 +45,7 @@ To use GitFix, simply run `npm i` and create a config.json file in the root fold
 
 - openai-key: OpenAI API key
 
- You can see an example config file in the config.json in this repository.
+You can see an example config file in the config.json in this repository.
 
 ### Indexing Your Repository
 
@@ -61,9 +61,9 @@ If search results in your .md files, your repo is ready to go. Otherwise, you sh
 
 ### Ready to go
 
- After those steps you can run GitFix.py and gitfix will look for grammar errors and will correct them automatically. 
+After those steps, you can run GitFix.py, and GitFix will look for grammar errors and will correct them automatically.
 
-Afterwards, you will receive the corrected content in a PR request to your repository.
+ Afterwards you will receive the corrected content in a PR request to your repository.
 
 ### How It Works
 
@@ -112,10 +112,11 @@ Our current interaction scheme with GitHub API requires the target repo to be a 
 
 This may cause problems for small repos as the search engine sometimes fails to index them.
 
-If possible, we would like to remove the GitHub search API from our pipeline.
+If possible, we would like to remove GitHub search API from our pipeline.
 
 
 ---
 
 If one of these ideas sounds like something you'd like to work on, contributions are very welcome! You can contribute by adding new features, fixing bugs, improving the documentation, writing blog posts, or by sharing GitFix on social media.
+
 
