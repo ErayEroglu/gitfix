@@ -15,11 +15,11 @@ GitFix is a grammar correction application that uses GPT4 to correct grammar err
 - Deployment Option: **[Fly.io](https://fly.io)**
 
 ## How to Use
- To use GitFix, you can simply run `pip install -r requirements.txt` and create a config.yaml file in the same folder as GitFix.py. Then, you are ready to go!
+To use GitFix, simply run `pip install -r requirements.txt` and create a config.yaml file in the same folder as GitFix.py. Then, you are ready to go!
 
 ### Requirements:
 
- - Python>3.10
+ - Python > 3.10
  - Having a public repository
  - An Upstash Redis database
  - OpenAI API key
@@ -56,7 +56,7 @@ If search results in your .md files, your repo is ready to go. Otherwise, you sh
 
 ### Ready to go
 
- After those steps you can run GitFix.py and gitfix will look for grammar errors and will correct them automatically. 
+After those steps, you can run GitFix.py, and GitFix will look for grammar errors and correct them automatically.
 
  Afterwards you will receive the corrected content in a PR request to your repository.
 
@@ -78,7 +78,7 @@ To run the gitfix server, you can simply create a docker image using our Dockerf
 
 Afterwards, you can use that image to deploy to any serverless providers which supports streaming with python applications.
 
-This part is tricky, as there are not many hosting platforms which supports streaming with Python including Lambda(due to bugs in Lambda adapter) and Vercel. To host our app, we preferred **[Fly.io](https://fly.io)** as it provides this rare feature.
+This part is tricky, as there are not many hosting platforms that support streaming with Python, including Lambda (due to bugs in the Lambda adapter) and Vercel. To host our app, we preferred **[Fly.io](https://fly.io)** as it provides this rare feature.
 
 To use fly, you should install fly cli, named flyctl. You can check [this](**[Fly.io](https://fly.io)**) tutorial for installation.
 
@@ -97,7 +97,7 @@ GitFix is a work in progress, so we'll add more features and improve the current
 
 ###### Optimize GPT4 Interaction:
 
-Currently, all of the file context is consumed in one message. We would like to have GPT to consume file content in multiple prompts as time complexity of transformers scale with O(n3). 
+Currently, all of the file context is consumed in one message. We would like GPT to consume file content in multiple prompts as the time complexity of transformers scales with O(n^3).
 
 In the future, we would like to partition the file content to contextually coherent sections and have gpt perform corrections on one section at a time.
 
@@ -107,7 +107,7 @@ In the future, we would like to partition the file content to contextually coher
 
 Our current interaction scheme with GitHub API requires the target repo to be indexed in the Github Search Engine. 
 
-This may cause problems for small repos as the search engine sometimes fail to index them.
+This may cause problems for small repos as the search engine sometimes fails to index them.
 
 If possible, we would like to remove github search api from our pipeline.
 
@@ -115,6 +115,5 @@ If possible, we would like to remove github search api from our pipeline.
 ---
 
 If one of these ideas sounds like something you'd like to work on, contributions are very welcome! You can contribute by adding new features, fixing bugs, improving the documentation, writing blog posts, or by sharing GitFix on social media.
-
 
 
