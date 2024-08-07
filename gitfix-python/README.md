@@ -15,11 +15,11 @@ GitFix is a grammar correction application that uses GPT4 to correct grammar err
 - Deployment Option: **[Fly.io](https://fly.io)**
 
 ## How to Use
- To use GitFix, you can simply run `pip install -r requirements.txt` and create a config.yaml file in the same folder as GitFix.py. Then, you are ready to go!
+To use GitFix, simply run `pip install -r requirements.txt` and create a config.yaml file in the same folder as GitFix.py. Then, you are ready to go!
 
 ### Requirements:
 
- - Python>3.10
+ - Python > 3.10
  - Having a public repository
  - An Upstash Redis database
  - OpenAI API key
@@ -28,7 +28,7 @@ GitFix is a grammar correction application that uses GPT4 to correct grammar err
 
 - github-repo: Target repository which GitFix will search for grammar errors.
 
-- files-per-run: Number of files GitFix will change at each run
+- files-per-run: Number of files Gitfix will change at each run 
 
 - github-token: A classical github token with repo:status, public_repo, and write:packages rights.
 
@@ -56,27 +56,27 @@ If search results in your .md files, your repo is ready to go. Otherwise, you sh
 
 ### Ready to go
 
- After those steps, you can run GitFix.py and GitFix will look for grammar errors and will correct them automatically.
+After those steps, you can run GitFix.py, and GitFix will look for grammar errors and correct them automatically.
 
- Afterwards you will receive the corrected content in a PR request to your repository.
+Afterwards, you will receive the corrected content in a PR request to your repository.
 
 ### How It Works
 
 <img src="./static/interaction_diagram.png" width="700">
 
-- GitFix uses GitHub API to fetch md and mdx files and passes these files to GPT4.
+- Gitfix uses Github API to fetch md and mdx files and passes these files to GPT4.
 
 - GPT4 indicates the grammar errors and suggests corrections.
 
 - GitFix forks the repository and pushes the corrections. If the target repository is owned by the github key owner, changes are pushed to a seperate branch.
 
-- Finally, a PR is sent to the target repository.
+- Finally, a PR request is sent to the target repository.
 
 ### Deploy It Yourself
 
 To run the gitfix server, you can simply create a docker image using our Dockerfile. During this process, docker copies the currently existing config file.
 
-Afterwards, you can use that image to deploy to any serverless providers that support streaming with Python applications.
+Afterwards, you can use that image to deploy to any serverless providers which supports streaming with python applications.
 
 This part is tricky, as there are not many hosting platforms that support streaming with Python, including Lambda (due to bugs in the Lambda adapter) and Vercel. To host our app, we preferred **[Fly.io](https://fly.io)** as it provides this rare feature.
 
@@ -115,5 +115,4 @@ If possible, we would like to remove the GitHub search API from our pipeline.
 ---
 
 If one of these ideas sounds like something you'd like to work on, contributions are very welcome! You can contribute by adding new features, fixing bugs, improving the documentation, writing blog posts, or by sharing GitFix on social media.
-
 
