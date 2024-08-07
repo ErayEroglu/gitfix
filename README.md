@@ -9,7 +9,7 @@ GitFix is a grammar correction application that uses GPT4 to correct grammar err
 
 ### Tech Stack
 
-- Backend: **Python 3.10** or **NodeJS 22**
+- Backend: **Python 3.10** or **Node.js 22**
 - AI Integration: **OpenAI API**
 - Data Storage: **[Upstash Redis](https://upstash.com/docs/redis/overall/getstarted)**
 - Deployment Options: **[Vercel](https://vercel.com)** or **[Fly.io](https://fly.io)**
@@ -73,9 +73,9 @@ After those steps, you can run GitFix.py, and GitFix will look for grammar error
 
 - GPT4 indicates the grammar errors and suggests corrections.
 
-- GitFix forks the repository and pushes the corrections. If the target repository is owned by the github key owner, changes are pushed to a seperate branch.
+- GitFix forks the repository and pushes the corrections. If the target repository is owned by the GitHub key owner, changes are pushed to a separate branch.
 
-- Finally, a PR is sent to the target repository.
+- Finally, a PR request is sent to the target repository.
 
 ### Deploy It Yourself
 
@@ -100,7 +100,7 @@ GitFix is a work in progress, so we'll add more features and improve the current
 
 ###### Optimize GPT4 Interaction:
 
-Currently, all of the file context is consumed in one message. We would like GPT to consume file content in multiple prompts as the time complexity of transformers scales with O(n^3).
+Currently, all of the file context is consumed in one message. We would like to have GPT to consume file content in multiple prompts as time complexity of transformers scale with O(n3). 
 
 In the future, we would like to partition the file content to contextually coherent sections and have gpt perform corrections on one section at a time.
 
